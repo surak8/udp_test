@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "udp_shared", "shared\udp_shared.csproj", "{5ED7513F-6A2D-4DCF-8376-806106289438}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "udp_client", "client\udp_client.csproj", "{F51DBBC8-740A-4380-9114-76356714D192}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B04CFB37-32BD-4929-8BB2-D1C2B2C66C77} = {B04CFB37-32BD-4929-8BB2-D1C2B2C66C77}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "udp_server", "server\udp_server.csproj", "{B04CFB37-32BD-4929-8BB2-D1C2B2C66C77}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5ED7513F-6A2D-4DCF-8376-806106289438}.Debug|x86.ActiveCfg = Debug|x86
+		{5ED7513F-6A2D-4DCF-8376-806106289438}.Debug|x86.Build.0 = Debug|x86
+		{5ED7513F-6A2D-4DCF-8376-806106289438}.Release|x86.ActiveCfg = Release|x86
+		{5ED7513F-6A2D-4DCF-8376-806106289438}.Release|x86.Build.0 = Release|x86
+		{F51DBBC8-740A-4380-9114-76356714D192}.Debug|x86.ActiveCfg = Debug|x86
+		{F51DBBC8-740A-4380-9114-76356714D192}.Debug|x86.Build.0 = Debug|x86
+		{F51DBBC8-740A-4380-9114-76356714D192}.Release|x86.ActiveCfg = Release|x86
+		{F51DBBC8-740A-4380-9114-76356714D192}.Release|x86.Build.0 = Release|x86
+		{B04CFB37-32BD-4929-8BB2-D1C2B2C66C77}.Debug|x86.ActiveCfg = Debug|x86
+		{B04CFB37-32BD-4929-8BB2-D1C2B2C66C77}.Debug|x86.Build.0 = Debug|x86
+		{B04CFB37-32BD-4929-8BB2-D1C2B2C66C77}.Release|x86.ActiveCfg = Release|x86
+		{B04CFB37-32BD-4929-8BB2-D1C2B2C66C77}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
