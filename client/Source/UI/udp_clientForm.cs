@@ -11,8 +11,9 @@
 using System;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.Net.Sockets;
 using System.Windows.Forms;
-
+using NSUdp_shared;
 
 namespace NSUdp_client {
     
@@ -29,7 +30,12 @@ namespace NSUdp_client {
             }
             Application.Exit();
         }
+        UdpClient _client;
+
         void formLoad(object sender, EventArgs ea) {
+            _client = SharedUDPDefinition.createUDPListener();
+            _client.BeginReceive()
+            
         }
         [STAThread()]
         public static void Main(string[] args) {

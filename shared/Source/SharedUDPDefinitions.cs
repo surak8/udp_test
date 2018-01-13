@@ -9,8 +9,29 @@
 //------------------------------------------------------------------------------
 
 
+using System;
+using System.Net;
+using System.Net.Sockets;
+
 namespace NSUdp_shared {
-    
-    public static class SharedUDPDefinitions {
+
+    public static class SharedUDPDefinition {
+        public const string SHARED_MULTICAST_ADDRESS = "239.0.0.222";
+        public const int SHARED_MULTICAST_PORT_NUMBER = 25000;
+
+        public static UdpClient createUDPListener() {
+            return makeUDPListener(SHARED_MULTICAST_ADDRESS, SHARED_MULTICAST_PORT_NUMBER);
+        }
+
+        static UdpClient makeUDPListener(string addr, int port) {
+            UdpClient ret;
+
+            ret = new UdpClient();
+            ret.ExclusiveAddressUse = false;
+            ret.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
+            ret.Client.Bind(new IPEndPoint(IPAddress.Any, port));
+            ret.JoinMulticastGroup(IPAddress.Parse(addr));
+            return ret;
+        }
     }
 }

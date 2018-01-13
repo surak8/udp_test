@@ -62,5 +62,11 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\shared\udp_shared.csproj">
+      <Project>{5ed7513f-6a2d-4dcf-8376-806106289438}</Project>
+      <Name>udp_shared</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
